@@ -6,7 +6,7 @@ function AboutPage() {
 
   useEffect(() => {
     // Fetch the message from your backend API
-    fetch("/api/message")
+    fetch("/api/hello")
       .then((response) => response.json())
       .then((data) => setBackendMessage(data.message))
       .catch((error) => {
