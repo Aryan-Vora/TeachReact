@@ -6,7 +6,15 @@ function AboutPage() {
 
   useEffect(() => {
     // Fetch the message from the backend when the component mounts
-    fetch("api/hello")
+    // Add name as a parameter to the post request
+    fetch("api/hello", 
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name: "John" }),
+    })
       .then((res) => res.json())
       .then((data) => setMessage(data.message));
   }, []);
