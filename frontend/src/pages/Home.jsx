@@ -1,20 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function AboutPage() {
+function HomePage() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
     // Fetch the message from the backend when the component mounts
     // Add name as a parameter to the post request
-    fetch("api/hello", 
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name: "John" }),
-    })
+    fetch("api/hello")
       .then((res) => res.json())
       .then((data) => setMessage(data.message));
   }, []);
@@ -22,9 +15,9 @@ function AboutPage() {
     <div>
       <h1>About Page</h1>
       <p>Message from backend: {message}</p>
-      <Link to="/">Go back Home</Link>
+      <Link to="/about">Go to About page</Link>
     </div>
   );
 }
 
-export default AboutPage;
+export default HomePage;

@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
+    "start-backend": "cd backend && node server.js",
+    "start-frontend": "cd frontend && npx vite",
+    "setup": "npm install && npm run install-backend && npm run install-frontend",
+    "install-frontend": "cd frontend && npm install",
+    "install-backend": "cd backend && npm install",
+    "build-frontend": "cd frontend && npm run build",
+    "dev": "npx vite"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
