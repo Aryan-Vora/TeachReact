@@ -63,22 +63,8 @@ Installs the dependencies for the backend application.
 
 ## Backend API
 
-The backend API currently has one endpoint:
+The backend API currently has one example endpoint:
 
 ### `GET /hello`
 
 Returns a JSON response with a `message` key, containing the string "Hello World!".
-
-## Frontend Application
-
-The frontend application is a React web application bootstrapped with Vite. It is configured to proxy API requests to the backend server to facilitate seamless integration between the frontend and backend during development.
-
-## Deployment
-
-For production deployments, build the frontend application and configure the backend to serve the frontend's static files as described in the `server.js` setup section of this README.
-
-## Contributing
-
-If you wish to contribute to this project, please fork the repository and submit a pull request.
-
-## License
